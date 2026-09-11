@@ -1,0 +1,152 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+
+:root {
+  /* Base */
+  --background: #f4f4f4;
+  --surface: #ffffff;
+  --surface-dim: #e5e5e5;
+  --surface-bright: #ffffff;
+
+  /* Text */
+  --on-background: #1a1a1a;
+  --on-surface: #1a1a1a;
+  --on-surface-variant: #5f6654;
+
+  /* Primary */
+  --primary: #6f9000;
+  --on-primary: #ffffff;
+  --primary-container: #c6ff2e;
+  --on-primary-container: #1a2400;
+
+  /* Secondary */
+  --secondary: #5b53a5;
+  --on-secondary: #ffffff;
+  --secondary-container: #e4dfff;
+  --on-secondary-container: #2e2765;
+
+  /* Tertiary */
+  --tertiary: #5f6368;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #e2e2e7;
+  --on-tertiary-container: #2e3034;
+
+  /* Error */
+  --error: #b3261e;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #410002;
+
+  /* Outline */
+  --outline: #74796a;
+  --outline-variant: #c3caac;
+
+  /* Surfaces */
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f2f2f2;
+  --surface-container: #eaeaea;
+  --surface-container-high: #e0e0e0;
+  --surface-container-highest: #d6d6d6;
+
+  /* Inverse */
+  --inverse-surface: #313030;
+  --inverse-on-surface: #f4f4f4;
+  --inverse-primary: #a6d700;
+}
+
+.dark {
+  --background: #131313;
+  --surface: #131313;
+  --surface-dim: #131313;
+  --surface-bright: #3a3939;
+
+  --on-background: #e5e2e1;
+  --on-surface: #e5e2e1;
+  --on-surface-variant: #c3caac;
+
+  --primary: #ffffff;
+  --on-primary: #273500;
+  --primary-container: var(--theme-primary);
+  --on-primary-container: #536d00;
+
+  --secondary: var(--theme-secondary);
+  --on-secondary: #2e2765;
+  --secondary-container: #474180;
+  --on-secondary-container: #b7b0f8;
+
+  --tertiary: #ffffff;
+  --on-tertiary: #2e3034;
+  --tertiary-container: #e2e2e7;
+  --on-tertiary-container: #636469;
+
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+
+  --outline: #8d9479;
+  --outline-variant: #434933;
+
+  --surface-container-lowest: #0e0e0e;
+  --surface-container-low: #1c1b1b;
+  --surface-container: #201f1f;
+  --surface-container-high: #2a2a2a;
+  --surface-container-highest: #353534;
+
+  --inverse-surface: #e5e2e1;
+  --inverse-on-surface: #313030;
+  --inverse-primary: #4e6700;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
